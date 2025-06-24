@@ -108,3 +108,37 @@ select {
     background-color: lime;
     color: black;
   }
+  .headers{
+    text-align: center;
+    color: rgb(22, 177, 22);
+    font-size: 30px;
+    font-family: cursive;
+  }
+  .headers-2{
+    text-align: center;
+    color: rgb(22, 177, 22);
+    font-size: 20px;
+    font-family: cursive;
+
+  }
+  #contact-page{
+    color: whitesmoke;
+    font-size: 17px;
+    text-align: center;
+  }
+  #About-page{
+    color: whitesmoke;
+    font-size: 17px;
+    text-align: center;
+  }
+  #About-page li{
+    list-style: none;
+
+  }
+  footer{
+    border: 2px solid gray;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.85) ;
+  }

@@ -36,13 +36,15 @@ nav a:hover{
     color: antiquewhite;
 
 }
+/**General form styling**/
 #Booking-form{
     max-width: 950px;
     justify-content: center;
     color:black;
 }
+  /**Genaral input styling**/
 .inputs{
-    max-width: 600px;
+    max-width: 75%;
     margin: 0 auto; 
     background: rgba(255, 255, 255, 0.85);
     padding: 20px;
@@ -55,6 +57,7 @@ nav a:hover{
     font-family: cursive;
 
 }
+/**Styling for all headings in the form*/
 .form-headings{
     color: rgb(22, 177, 22);
     text-align: center;
@@ -70,6 +73,15 @@ input{
     border: 1px solid limegreen;
     border-radius: 4px;
 }
+/**styling for date input**/
+input[type="date"] {
+    background-color: rgba(126, 125, 125, 0.85);
+    color: limegreen;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 75%;
+  }
+  /**Seat selection styling**/
 select {
     background-color: black;
     color: limegreen;
@@ -97,7 +109,7 @@ select {
     background-color: lime;
     color: black;
   }
-  
+  /**checkout button styling**/
   #bookingTotal button{
     background-color: black;
     color: limegreen;
@@ -108,6 +120,7 @@ select {
     background-color: lime;
     color: black;
   }
+  /**subheadings like contact and aboout**/
   .headers{
     text-align: center;
     color: rgb(22, 177, 22);
@@ -121,11 +134,13 @@ select {
     font-family: cursive;
 
   }
+  /**contact page**/
   #contact-page{
     color: whitesmoke;
     font-size: 17px;
     text-align: center;
   }
+  /**About page**/
   #About-page{
     color: whitesmoke;
     font-size: 17px;
@@ -135,6 +150,7 @@ select {
     list-style: none;
 
   }
+  /**footer**/
   footer{
     border: 2px solid gray;
     color: black;

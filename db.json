@@ -1,0 +1,28 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "name": "Zahra Mwangi",
+      "phoneNumber": "0723531362",
+      "residence": "Lang'atta, Nairobi",
+      "seats": 2,
+      "route": "Nairobi to Eldoret",
+      "depatureTime": "6.00am",
+      "depatureDate": "20/9/2025",
+      "paymentStatus": "Paid",
+      "mpesaCode": "MPX123ABC"
+    },
+    {
+      "id": 2,
+      "name": "James Maina",
+      "phoneNumber": "0743533666",
+      "residence": "Rongai, Nairobi",
+      "seats": 1,
+      "route": "Nairobi to Eldoret",
+      "depatureTime": "9.00am",
+      "depatureDate": "22/9/2025",
+      "paymentStatus": "Paid",
+      "mpesaCode": "MPX345DEF"
+    }
+  ]
+}

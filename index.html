@@ -21,63 +21,71 @@
     <main>
       <!--User fills in their personal info, all inputs are required-->
       <form id="Booking-form">
-        <div class="inputs"> 
-          <h2 >BOOK NOW!</h2>
-        <h3 class="form-headings">please fill in your personal information</h3>
-        <input type="text" placeholder="Full Name(John Doe)" required />
-        <input type="number" placeholder="Phone number(0712345678)" required />
-        <input type="text" placeholder="Residence(Rongai,Nairobi)" required />
-      
-        <!--User can easily select their route of travel(destination and depature)-->
-        <select id="route-selector" name="route" required>
-          <option value="">Select Route</option>
-          <option value="Nairobi to Eldoret">Nairobi → Eldoret</option>
-          <option value="Eldoret to Nairobi">Eldoret → Nairobi</option>
-        </select>
-        <!--Users can easily select their depature time(the sacco departs cars every 3 hours)-->
-        <select id="time-selctor" name="time" required>
-          <option value="">Departure Time</option>
-          <option value="6:00 AM">6:00 AM</option>
-          <option value="9:00 AM">9:00 AM</option>
-          <option value="12:00 PM">12:00 PM</option>
-          <option value="3:00 PM">3:00 PM</option>
-          <option value="6:00 PM">6:00 PM</option>
-          <option value="9:00 PM">9:00 PM</option>
-        </select>
-      
-        <!--Now the user can select their seat(s)-->
-        <h3 class="form-headings"> Choose Your Seat(s) 1000kes each</h3>
-        <div class="seat-grid">
-          <!-- 14 seat buttons -->
-          <button type="button" class="seat">Seat 1</button>
-          <button type="button" class="seat">Seat 2</button>
-          <button type="button" class="seat">Seat 3</button>
-          <button type="button" class="seat">Seat 4</button>
-          <button type="button" class="seat">Seat 5</button>
-          <button type="button" class="seat">Seat 6</button>
-          <button type="button" class="seat">Seat 7</button>
-          <button type="button" class="seat">Seat 8</button>
-          <button type="button" class="seat">Seat 9</button>
-          <button type="button" class="seat">Seat 10</button>
-          <button type="button" class="seat">Seat 11</button>
-          <button type="button" class="seat">Seat 12</button>
-          <button type="button" class="seat">Seat 13</button>
-          <button type="button" class="seat">Seat 14</button>
+        <div class="inputs">
+          <h2>BOOK NOW!</h2>
+          <h3 class="form-headings"
+            >please fill in your personal information</h3
+          >
+          <input id="name" type="text" placeholder="Full Name(John Doe)" required />
+          <input id="phoneNumber"
+            type="number"
+            placeholder="Phone number(0712345678)"
+            required />
+          <input id="residence" type="text" placeholder="Residence(Rongai,Nairobi)" required />
+          <input id="date" type="date" name="departureDate" required />
+          <!--User can easily select their route of travel(destination and depature)-->
+          <select id="route-selector" name="route" required>
+            <option value="">Select Route</option>
+            <option value="Nairobi to Eldoret">Nairobi → Eldoret</option>
+            <option value="Eldoret to Nairobi">Eldoret → Nairobi</option>
+          </select>
+          <!--Users can easily select their depature time(the sacco departs cars every 3 hours)-->
+          <select id="time-selctor" name="time" required>
+            <option value="">Departure Time</option>
+            <option value="6:00 AM">6:00 AM</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="3:00 PM">3:00 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="9:00 PM">9:00 PM</option>
+          </select>
+
+          <!--Now the user can select their seat(s)-->
+          <h3 class="form-headings"> Choose Your Seat(s) 1000kes each</h3>
+          <div class="seat-grid">
+            <!-- 14 seat buttons -->
+            <button type="button" class="seat">Seat 1</button>
+            <button type="button" class="seat">Seat 2</button>
+            <button type="button" class="seat">Seat 3</button>
+            <button type="button" class="seat">Seat 4</button>
+            <button type="button" class="seat">Seat 5</button>
+            <button type="button" class="seat">Seat 6</button>
+            <button type="button" class="seat">Seat 7</button>
+            <button type="button" class="seat">Seat 8</button>
+            <button type="button" class="seat">Seat 9</button>
+            <button type="button" class="seat">Seat 10</button>
+            <button type="button" class="seat">Seat 11</button>
+            <button type="button" class="seat">Seat 12</button>
+            <button type="button" class="seat">Seat 13</button>
+            <button type="button" class="seat">Seat 14</button>
+          </div>
+          <!--Checkout button that displays current users total charges-->
+          <div id="bookingTotal" class="floating-total"
+            >Total: KES 0 <br />
+            <button type="submit">Checkout</button>
+          </div>
         </div>
-        <!--Checkout button that displays current users total charges-->
-        <div id="bookingTotal" class="floating-total"
-          >Total: KES 0 <br />
-          <button type="submit">Checkout</button>
-        </div>
-      </div>
       </form>
       <!--For users to be able to get Luxury Rides contact info-->
       <div id="contact-page">
         <h3 class="headers">Contact Us</h3>
-        <p
-          >    Do you have any questions, concerns, or suggestions? Our dedicated customer support team is here for you 24/7. <br> 
-          Whether you need help with booking, payment, or just want to give feedback, don’t hesitate to reach out. <br>
-          We value every passenger and strive to make your Luxury Rides experience seamless and stress-free.</p
+        <p>
+          Do you have any questions, concerns, or suggestions? Our dedicated
+          customer support team is here for you 24/7. <br />
+          Whether you need help with booking, payment, or just want to give
+          feedback, don’t hesitate to reach out. <br />
+          We value every passenger and strive to make your Luxury Rides
+          experience seamless and stress-free.</p
         >
         <br />
         📞 +254-712-345-678 <br />
@@ -88,15 +96,15 @@
         <h2 class="headers">About Luxury Rides</h2>
         <p
           ><strong>Luxury Rides</strong> is your modern solution for booking
-          premium transportation <br>across Kenya's most popular intercity routes —
-          <strong>Nairobi, Nakuru, and Eldoret</strong>.</p
+          premium transportation <br />across Kenya's most popular intercity
+          routes — <strong>Nairobi, Nakuru, and Eldoret</strong>.</p
         >
 
         <h4 class="headers-2">🎯 Our Mission</h4>
         <p
           >To ease your journey by removing the hassle of long queues, cash
-          payments, <br>and booking uncertainties — all from the comfort of your
-          phone.</p
+          payments, <br />and booking uncertainties — all from the comfort of
+          your phone.</p
         >
 
         <h4 class="headers-2">🛠️ How It Works</h4>

@@ -9,7 +9,7 @@
   <body>
     <header>
       <!--Navigation Bar-->
-      <nav>
+      <nav id="navbar">
         <h1 class="logo">Luxury RIdes</h1>
         <ul>
           <li><a href="#Booking-form">Book</a></li>
@@ -21,9 +21,13 @@
     <main>
       <!--User fills in their personal info, all inputs are required-->
       <form id="Booking-form">
+        <div class="inputs"> 
+          <h2 >BOOK NOW!</h2>
+        <h3 class="form-headings">please fill in your personal information</h3>
         <input type="text" placeholder="Full Name(John Doe)" required />
         <input type="number" placeholder="Phone number(0712345678)" required />
-        <input type="text" placeholder="Residence(Rongai,Nairobi)" />
+        <input type="text" placeholder="Residence(Rongai,Nairobi)" required />
+      
         <!--User can easily select their route of travel(destination and depature)-->
         <select id="route-selector" name="route" required>
           <option value="">Select Route</option>
@@ -40,8 +44,9 @@
           <option value="6:00 PM">6:00 PM</option>
           <option value="9:00 PM">9:00 PM</option>
         </select>
+      
         <!--Now the user can select their seat(s)-->
-        <h3>🪑 Choose Your Seats (KES 1000 each)</h3>
+        <h3 class="form-headings"> Choose Your Seat(s) 1000kes each</h3>
         <div class="seat-grid">
           <!-- 14 seat buttons -->
           <button type="button" class="seat">Seat 1</button>
@@ -64,6 +69,7 @@
           >Total: KES 0 <br />
           <button type="submit">Checkout</button>
         </div>
+      </div>
       </form>
       <!--For users to be able to get Luxury Rides contact info-->
       <div id="contact-page">

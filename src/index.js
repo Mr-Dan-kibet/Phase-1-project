@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       departureDate,
       route,
       departureTime,
-      seats,
       selectedSeats,
+      seats,
       paymentStatus: "Pending",
       mpesaCode: "",
     };
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       body: JSON.stringify(booking),
     })
-      .then((res) => res.json()) // Wait for response and convert it to JSON
+      .then((res) => res.json())
       .then((data) => {
         console.log("Booking added:", data);
         alert("✅ Booking successfully submitted!");

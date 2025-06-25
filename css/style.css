@@ -1,6 +1,6 @@
 /**Applies to the whole website.Holds the background image.**/
 body{
-    background-image: url(https://img.freepik.com/premium-photo/cars-illuminated-road-against-sky-sunset_1048944-20501684.jpg?semt=ais_items_boosted&w=740);
+    background-image: url(https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg?semt=ais_items_boosted&w=740);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 21px;
     font-weight: 600;
-    color: aqua;
+    color: lawngreen;
     padding: 20px;
     transition: color 0.2s;
 }
@@ -126,7 +126,7 @@ select {
     background-color: lime;
     color: black;
   }
-  /**subheadings like contact and aboout**/
+  /**subheadings like contact and about**/
   .headers{
     text-align: center;
     color: rgb(22, 177, 22);

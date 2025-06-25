@@ -109,6 +109,12 @@ select {
     background-color: lime;
     color: black;
   }
+  /**For selected seats**/
+  .seat.selected {
+    background-color: green;
+    color: white;
+  }
+  
   /**checkout button styling**/
   #bookingTotal button{
     background-color: black;

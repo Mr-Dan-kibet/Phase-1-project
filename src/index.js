@@ -1,4 +1,5 @@
 const API1URL = "http://localhost:3000/bookings";
+const MPESA_API_URL = "http://localhost:5000/mpesa/stk";
 
 document.addEventListener("DOMContentLoaded", () => {
   //  1. Seat Selection Logic
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2. Booking Form Submission Logic
   const form = document.getElementById("Booking-form");
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const route = document.getElementById("route-selector").value;
     const departureTime = document.getElementById("time-selctor").value;
 
-    // 2.2 Build booking object
+    //  Build booking object
     const booking = {
       name,
       phoneNumber,
@@ -52,31 +53,64 @@ document.addEventListener("DOMContentLoaded", () => {
       mpesaCode: "",
     };
 
-    // Send data to db.json using POST
-    fetch(API1URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(booking),
-    })
-      .then((res) => res.json()) // convert response to usable object
-      .then((data) => {
-        alert("✅ Booking successfully submitted!");
-        form.reset();
-
-        // Clear seat selection state
-        selectedSeats = [];
-        seatButtons.forEach((btn) => btn.classList.remove("selected"));
-
-        // Reset total price display
-        totalDisplay.innerHTML = `Total: KES 0 <br/>
-          <button type="submit">Checkout</button>`;
-      })
-      .catch((error) => {
-        console.error("Booking failed:", error);
-        alert("❌ Something went wrong while submitting.");
+    try {
+      // Send data to db.json using POST
+      const res = await fetch(API1URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(booking),
       });
+
+      const data = await res.json();
+      alert("✅ Booking successfully submitted!");
+      form.reset();
+
+      // Clear seat selection state
+      selectedSeats = [];
+      seatButtons.forEach((btn) => btn.classList.remove("selected"));
+
+      // Reset total price display
+      totalDisplay.innerHTML = `Total: KES 0 <br/>
+          <button type="submit">Checkout</button>`;
+
+      // Prompt for M-Pesa number
+      let mpesaPhone = prompt("Enter M-Pesa number to pay (e.g. 0712345678):");
+
+      if (!mpesaPhone || mpesaPhone.trim() === "") {
+        alert("❌ M-Pesa number required. Booking saved but payment not sent.");
+        return;
+      }
+
+      mpesaPhone = mpesaPhone.startsWith("0")
+        ? "254" + mpesaPhone.slice(1)
+        : mpesaPhone;
+
+      const amount = booking.seats * 1000;
+
+      // Send STK Push to server
+      const stkRes = await fetch(MPESA_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ phone: mpesaPhone, amount }),
+      });
+
+      const stkData = await stkRes.json();
+
+      if (stkData.success) {
+        alert(
+          "📲 M-Pesa prompt sent successfully. Complete payment on your phone."
+        );
+      } else {
+        alert("❌ STK Push failed. Try again later.");
+        console.error(stkData);
+      }
+    } catch (error) {
+      console.error("❌ Booking or STK Push failed:", error);
+      alert("❌ Something went wrong while submitting.");
+    }
   });
 });
-

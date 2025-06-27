@@ -77,6 +77,8 @@ Use the Live Server extension in VS Code
 OR simply open index.html in your browser
 ```
 ---
+## HOW TO USE
+
 ## 👨🏽‍💻 Author
 Dan Rotich
 Full-Stack Developer @ Moringa School
@@ -89,4 +91,7 @@ GitHub: @Mr-Dan-kibet
 ---
 
 ## 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
+### MIT License
+
+### Copyright (c) 2025 DAN ROTICH

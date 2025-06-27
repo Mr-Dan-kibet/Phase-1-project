@@ -60,8 +60,8 @@ Luxury-Rides/
 
 1. **Clone the Repository**
  ```bash
-  git clone 
-  cd 
+  git clone git@github.com:Mr-Dan-kibet/Phase-1-project.git
+  cd Phase-1-project
 ```
 2. Install JSON Server (if not already installed)
 ```

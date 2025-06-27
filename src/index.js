@@ -1,4 +1,4 @@
-const BASE_URL = "https://phase-1-project-backend-u0oo.onrender.com";
+const BASE_URL = "https://phase-1-project-wvcx.onrender.com";
 const API1URL = `${BASE_URL}/bookings`;
 const MPESA_API_URL = `${BASE_URL}/mpesa/stk`;
 

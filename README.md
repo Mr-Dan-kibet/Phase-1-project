@@ -43,13 +43,16 @@ This project demonstrates frontend engineering using **HTML**, **CSS**, **JavaSc
 Luxury-Rides/
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── src/
-│ └── index.js
-├── db.json
+│   └── index.js
+├── server/
+│   ├── db.json
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
 ├── README.md
 ```
-
 
 ---
 

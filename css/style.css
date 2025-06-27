@@ -11,6 +11,15 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+ #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(66, 62, 62);
+     }
+
 .logo{
     font-family: cursive;
     font-size: 40px;
@@ -38,9 +47,11 @@ nav a:hover{
 }
 /**General form styling**/
 #Booking-form{
-    max-width: 950px;
-    justify-content: center;
     color:black;
+    flex: 1;
+    min-width: 0; 
+    padding: 20px;
+    border-radius: 8px;
 }
   /**Genaral input styling**/
 .inputs{
@@ -164,3 +175,148 @@ select {
     text-align: center;
     background-color:rgba(255, 255, 255, 0.85) ;
   }
+  .bookings{
+    display: flex;
+    gap: 40px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 150px;
+  }
+  .booking-history {
+    flex: 1;
+    min-width: 0; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .booking-history h2{
+    color: rgb(22, 177, 22);;
+  }
+  
+  #booking-history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .booking-item {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .delete-booking {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .booking-status.paid {
+    color: #28a745;
+  }
+  
+  .booking-status.pending {
+    color: #ffc107;
+  }
+  /* Inquiry Form Styles */
+.inquiry-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid limegreen;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 92%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid limegreen;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submit-btn {
+    background: black;
+    color: limegreen;
+    border: 2px solid limegreen;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background: limegreen;
+    color: black;
+  }
+  
+  .contact-info {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Booking History List Styling */
+.booking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .booking-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .edit-booking {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-booking:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+  }
+  

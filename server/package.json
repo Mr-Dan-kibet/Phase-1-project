@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:api": "json-server --watch db.json --port 3000",
-    "start:mpesa": "nodemon server.js",
+    "start:mpesa": "nodemon --ignore db.json server.js",
     "dev": "concurrently \"npm run start:api\" \"npm run start:mpesa\""
   },
   "keywords": [],

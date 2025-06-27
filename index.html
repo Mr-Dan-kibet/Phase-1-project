@@ -20,6 +20,7 @@
     </header>
     <main>
       <!--User fills in their personal info, all inputs are required-->
+      <div class="bookings">
       <form id="Booking-form">
         <div class="inputs">
           <h2>BOOK NOW!</h2>
@@ -74,8 +75,16 @@
             >Total: KES 0 <br />
             <button type="submit">Checkout</button>
           </div>
+          <!-- Bookings will load here -->
         </div>
       </form>
+      <div class="booking-history">
+        <h2>Your Booking History</h2>
+        <ol id="booking-history-list">
+          <!-- Bookings will load here dynamically -->
+        </ol>
+      </div>
+      </div>
       <!--For users to be able to get Luxury Rides contact info-->
       <div id="contact-page">
         <h3 class="headers">Contact Us</h3>
@@ -90,6 +99,39 @@
         <br />
         📞 +254-712-345-678 <br />
         📨 luxuryrides@gmail.com
+
+        <div class="inquiry-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="contact-name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="contact-email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="tel" id="contact-phone" placeholder="Phone Number (Optional)">
+            </div>
+            
+            <div class="form-group">
+              <select id="contact-subject" required>
+                <option value="">Select Inquiry Type</option>
+                <option value="booking">Booking Assistance</option>
+                <option value="payment">Payment Issues</option>
+                <option value="feedback">Feedback/Suggestions</option>
+                <option value="complaint">Complaint</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="contact-message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Inquiry</button>
+          </form>
+        </div>
       </div>
       <!--Get more information about Luxury rides-->
       <div id="About-page">
@@ -104,16 +146,7 @@
         <p
           >To ease your journey by removing the hassle of long queues, cash
           payments, <br />and booking uncertainties — all from the comfort of
-          your phone.</p
-        >
-
-        <h4 class="headers-2"> How It Works</h4>
-        <ul>
-          <li> 🟢View available rides and pick your preferred seats</li>
-          <li> 🟢Make M-Pesa payments in seconds </li>
-          <li> 🟢Instantly receive your booking receipt</li>
-          <li> 🟢Coming soon: Pre-order meals for your stopovers</li>
-        </ul>
+          your phone.</p>
       </div>
     </main>
     <footer> <p>LuxuryRides @2025</p> </footer>

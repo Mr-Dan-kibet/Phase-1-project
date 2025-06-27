@@ -1,6 +1,5 @@
-const BASE_URL = "https://phase-1-project-wvcx.onrender.com";
-const API1URL = `http://localhost:3000/bookings`;
-const MPESA_API_URL = `${BASE_URL}/mpesa/stk`;
+const API1URL = `https://luxury-rides.onrender.com/bookings`;
+const MPESA_API_URL = `https://phase-1-project-1-8lx9.onrender.com/mpesa/stk`;
 
 // Utility functions
 const formatPhone = (phone) => {

@@ -1,5 +1,5 @@
 const BASE_URL = "https://phase-1-project-wvcx.onrender.com";
-const API1URL = `${BASE_URL}/bookings`;
+const API1URL = `http://localhost:3000/bookings`;
 const MPESA_API_URL = `${BASE_URL}/mpesa/stk`;
 
 // Utility functions

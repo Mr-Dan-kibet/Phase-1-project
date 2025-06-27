@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       residence: document.getElementById("residence").value,
       departureDate: document.getElementById("date").value,
       route: document.getElementById("route-selector").value,
-      departureTime: document.getElementById("time-selctor").value,
+      departureTime: document.getElementById("time-selector").value, // fixed here
       selectedSeats,
       seats: selectedSeats.length,
       paymentStatus: "Pending",
@@ -253,10 +253,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // 3. Enhanced polling with timeout
           const startTime = Date.now();
+
           const pollPaymentStatus = async () => {
             try {
+              // Use formatted phone for polling
               const statusRes = await fetch(
-                `${BASE_URL}/mpesa/status/${booking.phoneNumber}`
+                `${BASE_URL}/mpesa/status/${mpesaPhone}`
               );
 
               if (!statusRes.ok) throw new Error("Status check failed");

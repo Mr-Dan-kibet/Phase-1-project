@@ -1,5 +1,6 @@
-const API1URL = "http://localhost:3000/bookings";
-const MPESA_API_URL = "http://localhost:5000/mpesa/stk";
+const BASE_URL = "https://phase-1-project-backend-u0oo.onrender.com";
+const API1URL = `${BASE_URL}/bookings`;
+const MPESA_API_URL = `${BASE_URL}/mpesa/stk`;
 
 // Utility functions
 const formatPhone = (phone) => {
@@ -23,7 +24,7 @@ const showReceipt = (booking) => {
     booking.paymentStatus === "Completed"
       ? `✅ Paid (M-Pesa: ${booking.mpesaCode})`
       : booking.mpesaCode
-      ? `🕒 Processing...`
+      ? ` Processing...`
       : `❌ Unpaid`;
 
   const receiptDetails = `
@@ -309,4 +310,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
